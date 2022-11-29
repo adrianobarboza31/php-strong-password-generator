@@ -1,9 +1,11 @@
 <?php
+ session_start();
 include __DIR__ .'/functions.php';
 if(isset($_GET['numero']) && !empty($_GET['numero'])) {
     $password=randompassword($_GET['numero']);
-
+    $_SESSION['pass'] = $password;
 };
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -20,6 +22,7 @@ if(isset($_GET['numero']) && !empty($_GET['numero'])) {
     <button type="submit">invia</button>
     <button type="reset">reset</button>
 </form>
-    <?php echo $password ?>
+    <!-- -->
+    <a href="session.php">clicca il link per vedere la password</a>
 </body>
 </html>

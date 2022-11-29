@@ -11,6 +11,7 @@ function randompassword($lunghezza){
                 $indice=rand(0,strlen($pass_noflitru) -1);
                 $password .=$pass_noflitru[$indice];
     }
+    
     return   $password;
     }
 ?>
