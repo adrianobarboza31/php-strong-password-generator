@@ -1,5 +1,7 @@
 <?php
  session_start();
+ $lunghezza=($_GET['numero']);
+ $_SESSION['lung'] = $lunghezza;
 include __DIR__ .'/functions.php';
 if(isset($_GET['numero']) && !empty($_GET['numero'])) {
     $password=randompassword($_GET['numero']);
